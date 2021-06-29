@@ -66,14 +66,14 @@ public class User {
 		return this.middleNames;
 	}
 
-	public void addMiddleName(String middleNames) {
-		this.middleNames.add(middleNames);
+	public void setMiddleName(String middleNames) {
+		if (middleNames == null) {
+			this.middleNames = new ArrayList<>();
+		} else {
+			this.middleNames.add(middleNames);
+		}
 	}
 
-	public void setMiddleNames(ArrayList<String> middleNames) {
-		this.middleNames = middleNames;
-	}
-	
 	@Override
 	public String toString() {
 		return getForename() + " " + getMiddleNames() + " " + getSurname() + " " + getAge() + " " + getEmail() 
