@@ -95,6 +95,14 @@ public static void main(String[] args) {
 			System.out.println(i);
 			
 		}
+		
+		System.out.println("\n---Print using super---");
+		Animal molly = new Dog();
+		System.out.println(molly);
+		
+		System.out.println("\n---Print final method dog eats---");
+		molly.dogEat(molly.getName());
+		
 	}
 
 }

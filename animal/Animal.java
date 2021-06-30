@@ -7,6 +7,21 @@ public class Animal {
 	private String colour;
 	private int age;
 	
+	final public void dogEat(String dogName) {
+		System.out.println(dogName + " dog eats (final method)");
+	}
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(String name, String breed, String colour, int age) {
+		this.name = name;
+		this.breed = breed;
+		this.colour = colour;
+		this.age = age;
+	}
+	
 	public String getName() {
 		return name;
 	}
