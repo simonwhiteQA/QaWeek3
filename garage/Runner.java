@@ -4,10 +4,10 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		Garage g = new Garage();
-		Car c  = new Car(2019, "Hyundai", "i20", "Car");
-		Car c2  = new Car(2021, "BMW", "i8", "Car");
-		Motorbike m  = new Motorbike(2005, "Harley Davidson", "hd35", "Motorbike");
-		Scooter s  = new Scooter(1990, "Moped", "e56", "Scooter");
+		Car c  = new Car(2019, "Hyundai", "i20", "Car", 15000);
+		Car c2  = new Car(2021, "BMW", "i8", "Car", 80499);
+		Motorbike m  = new Motorbike(2005, "Harley Davidson", "hd35", "Motorbike", 19999);
+		Scooter s  = new Scooter(1990, "Moped", "e56", "Scooter", 1499);
 	
 		g.addVehicle(s);
 		g.addVehicle(m);

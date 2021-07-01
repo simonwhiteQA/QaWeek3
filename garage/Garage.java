@@ -38,19 +38,7 @@ public class Garage {
 		
 		public void pricing() {
 			for (Vehicle i : vehicles) {
-				
-			if (i instanceof Car) {
-				System.out.println("Car Price: £15000");
-			} 
-			
-			else if (i instanceof Motorbike) {
-				System.out.println("Motorbike Price: £18000");
-			}
-			
-			else if (i instanceof Scooter) {
-				System.out.println("Scooter Price: £2499");
-			}
-			
+				System.out.println(i.getType() + " " + i.getMake() + " Price: £" + i.getPrice());
 			}
 		}
 		

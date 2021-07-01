@@ -6,17 +6,19 @@ public class Vehicle {
 	private String type;
 	private String make;
 	private String vehicleType;
+	private int price;
 	
 	public void getVehicle() {
 		System.out.println("Vehicle Info: (" + getYearMan() + ") " + getType() + " " + getMake() + " - " + getVehicleType());
 	}
 	
-	public Vehicle(int yearMan, String type, String make, String vehicleType) {
+	public Vehicle(int yearMan, String type, String make, String vehicleType, int price) {
 		super();
 		this.yearMan = yearMan;
 		this.type = type;
 		this.make = make;
 		this.vehicleType = vehicleType;
+		this.price = price;
 	}
 
 	public Vehicle() {
@@ -46,6 +48,12 @@ public class Vehicle {
 	}
 	public void setVehicleType(String vehicleType) {
 		this.vehicleType = vehicleType;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	
 	@Override
