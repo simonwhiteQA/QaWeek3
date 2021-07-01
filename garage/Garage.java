@@ -15,18 +15,70 @@ public class Garage {
 			vehicles.add(v);
 		}
 		
-		public void pricing(Vehicle v) {
-			if (v instanceof Car) {
-				System.out.println("Car Price: £1000");
+		public void removeVehicle(int i) {
+			vehicles.remove(i);
+		}
+		
+		public void removeVehicleType(String s) {
+
+			for (int i=0; i < vehicles.size(); i++) {
+				if (vehicles.get(i).getVehicleType().equalsIgnoreCase(s)) {
+					vehicles.remove(i);
+					i--;
+				}
+			}
+
+		}
+		
+		public void printVehicles() {
+			for (Vehicle i : vehicles) {
+				System.out.println(i);
+			}
+		}
+		
+		public void pricing() {
+			for (Vehicle i : vehicles) {
+				
+			if (i instanceof Car) {
+				System.out.println("Car Price: £15000");
 			} 
 			
-			else if (v instanceof Motorbike) {
-				System.out.println("Motorbike Price: £2000");
+			else if (i instanceof Motorbike) {
+				System.out.println("Motorbike Price: £18000");
 			}
 			
-			else if (v instanceof Scooter) {
-				System.out.println("Scooter Price: £500");
+			else if (i instanceof Scooter) {
+				System.out.println("Scooter Price: £2499");
 			}
+			
+			}
+		}
+		
+		public void fixVehicle(Vehicle v) {
+
+			if (v instanceof Car) {
+				System.out.println("Car Fix: £200");
+			}
+
+			else if (v instanceof Motorbike) {
+				System.out.println("Motorbike Fix: £150");
+			}
+
+			else if (v instanceof Scooter) {
+				System.out.println("Scooter Price: £75");
+			}
+
+		}
+		
+		public void emptyGarage () {
+			vehicles.removeAll(vehicles);
+			
+			if (vehicles.isEmpty() == true){
+				System.out.println("Garage is empty.");
+			} else {
+				System.out.println("Empyting garage has failed.");
+			}
+			
 		}
 		
 	}

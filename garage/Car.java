@@ -6,8 +6,8 @@ public class Car extends Vehicle {
 		super();
 	}
 
-	public Car(int yearMan, String type, String make) {
-		super(yearMan, type, make);
+	public Car(int yearMan, String type, String make, String vehicleType) {
+		super(yearMan, type, make, vehicleType);
 	}
 	
 	

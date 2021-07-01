@@ -5,22 +5,22 @@ public class Vehicle {
 	private int yearMan;
 	private String type;
 	private String make;
+	private String vehicleType;
 	
 	public void getVehicle() {
-		System.out.println("Vehicle Info: (" + getYearMan() + ") " + getType() + " " + getMake());
+		System.out.println("Vehicle Info: (" + getYearMan() + ") " + getType() + " " + getMake() + " - " + getVehicleType());
 	}
 	
-	
-	public Vehicle(int yearMan, String type, String make) {
+	public Vehicle(int yearMan, String type, String make, String vehicleType) {
 		super();
 		this.yearMan = yearMan;
 		this.type = type;
 		this.make = make;
+		this.vehicleType = vehicleType;
 	}
 
-
 	public Vehicle() {
-		
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getYearMan() {
@@ -41,7 +41,16 @@ public class Vehicle {
 	public void setMake(String make) {
 		this.make = make;
 	}
+	public String getVehicleType() {
+		return vehicleType;
+	}
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
 	
-	
+	@Override
+	public String toString() {
+		return "Vehicle Info: (" + getYearMan() + ") " + getType() + " " + getMake() + " - " + getVehicleType();
+	}
 
 }
